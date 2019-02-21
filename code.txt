@@ -1,0 +1,178 @@
+附录A：程序1[17]
+function f=xiangjiao()
+a=2;b=0.5;c=1;d=1;e=1;f=1;y0=2;%参数赋初值
+[x,y]=ode45('hanshu',[0 1000],[2 1]',[],a,b,c,d,e,f,y0);%初值（2.5,0.01）情况下得xy的值
+plot(y(:,1),y(:,2), 'k')
+[x,y]=ode45('hanshu',[0 1000],[3 2]',[],a,b,c,d,e,f,y0);%同上，下同
+hold on
+plot(y(:,1),y(:,2), 'k')
+[x,y]=ode45('hanshu',[0 1000],[4 3]',[],a,b,c,d,e,f,y0);
+hold on
+plot(y(:,1),y(:,2), 'k')
+[x,y]=ode45('hanshu',[0 1000],[5 4]',[],a,b,c,d,e,f,y0);
+hold on
+plot(y(:,1),y(:,2), 'k')
+[x,y]=ode45('hanshu',[0 1000],[6 5]',[],a,b,c,d,e,f,y0);
+hold on
+plot(y(:,1),y(:,2), 'k')
+[x,y]=ode45('hanshu',[0 1000],[7 6]',[],a,b,c,d,e,f,y0);
+hold on
+plot(y(:,1),y(:,2), 'k')
+[x,y]=ode45('hanshu',[0 1000],[8 7]',[],a,b,c,d,e,f,y0);
+hold on
+plot(y(:,1),y(:,2), 'k')
+[x,y]=ode45('hanshu',[0 1000],[9 8]',[],a,b,c,d,e,f,y0);
+hold on
+plot(y(:,1),y(:,2), 'k')
+[x,y]=ode45('hanshu',[0 1000],[10 9]',[],a,b,c,d,e,f,y0);
+hold on
+plot(y(:,1),y(:,2), 'k')
+[x,y]=ode45('hanshu',[0 1000],[11 10]',[],a,b,c,d,e,f,y0);
+hold on
+plot(y(:,1),y(:,2), 'k')
+[x,y]=ode45('hanshu',[0 1000],[2.8 0.2]',[],a,b,c,d,e,f,y0);
+hold on
+plot(y(:,1),y(:,2), 'k')
+[x,y]=ode45('hanshu',[0 1000],[4 0.6]',[],a,b,c,d,e,f,y0);
+hold on
+plot(y(:,1),y(:,2), 'k')
+z=1:0.1:5;%抛物线和直线
+w=z-1;
+q=0:0.1:9;
+p=3-0.5*abs(q-2);
+hold on
+plot(z,w,'b','LineWidth',2);
+hold on
+plot(p,q,'b','LineWidth',2)
+xlabel('x', 'fontsize',20); % x轴注解 
+ylabel('y', 'fontsize',20); % y轴注解
+xlim([1,4.5]);ylim([0,4]); %设置x，y轴的显示范围
+title('图4-3-1-2 两等倾线相交有1个正平衡点M时的轨线的运动方向', 'fontsize',14,'FONTWeight','bold');
+text(2.1,-0.2, 'P', 'fontsize',16,'FONTWeight','bold');
+text(3.1,1.9,'M', 'fontsize',16,'FONTWeight','bold');
+text(3.2,1.1,'I', 'fontsize',16,'FONTWeight','bold');
+text(3.3,3.3,'II','fontsize',16,'FONTWeight','bold');
+text(2,2,'III','fontsize',16,'FONTWeight','bold');
+text(1.8,0.3,'IV','fontsize',16,'FONTWeight','bold')
+text(1.7,3.5, '等倾线1：x=3-0.5|y-2|', 'fontsize',12,'FONTWeight','bold'); %作文本标记
+text(3.3,3, '等倾线2：y=x-1', 'fontsize',12,'FONTWeight','bold');
+
+附录B：程序2 [17] 
+function f=xiangjiao2 ()
+a=2;b=0.5;c=12;d=6;e=1;f=1;y0=2;%参数赋初值
+[x,y]=ode45('hanshu',[0 1000],[2 1]',[],a,b,c,d,e,f,y0);%初值（2.5,0.01）情况下得xy的值
+plot(y(:,1),y(:,2), 'k')
+[x,y]=ode45('hanshu',[0 1000],[3 2]',[],a,b,c,d,e,f,y0);%同上，下同
+hold on
+plot(y(:,1),y(:,2), 'k')
+[x,y]=ode45('hanshu',[0 1000],[4 3]',[],a,b,c,d,e,f,y0);
+hold on
+plot(y(:,1),y(:,2), 'k')
+[x,y]=ode45('hanshu',[0 1000],[5 4]',[],a,b,c,d,e,f,y0);
+hold on
+plot(y(:,1),y(:,2), 'k')
+[x,y]=ode45('hanshu',[0 1000],[6 5]',[],a,b,c,d,e,f,y0);
+hold on
+plot(y(:,1),y(:,2), 'k')
+[x,y]=ode45('hanshu',[0 1000],[7 6]',[],a,b,c,d,e,f,y0);
+hold on
+plot(y(:,1),y(:,2), 'k')
+[x,y]=ode45('hanshu',[0 1000],[8 7]',[],a,b,c,d,e,f,y0);
+hold on
+plot(y(:,1),y(:,2), 'k')
+[x,y]=ode45('hanshu',[0 1000],[9 8]',[],a,b,c,d,e,f,y0);
+hold on
+plot(y(:,1),y(:,2), 'k')
+[x,y]=ode45('hanshu',[0 1000],[10 9]',[],a,b,c,d,e,f,y0);
+hold on
+plot(y(:,1),y(:,2), 'k')
+[x,y]=ode45('hanshu',[0 1000],[11 10]',[],a,b,c,d,e,f,y0);
+hold on
+plot(y(:,1),y(:,2), 'k')
+[x,y]=ode45('hanshu',[0 1000],[2.8 0.2]',[],a,b,c,d,e,f,y0);
+hold on
+plot(y(:,1),y(:,2), 'k')
+[x,y]=ode45('hanshu',[0 1000],[4 0.6]',[],a,b,c,d,e,f,y0);
+hold on
+plot(y(:,1),y(:,2), 'k')
+z=1:0.1:5;%抛物线和直线
+w=6*z-12;
+q=0:0.1:9;
+p=3-0.5*abs(q-2);
+hold on
+plot(z,w,'b','LineWidth',2);
+hold on
+plot(p,q,'b','LineWidth',2)
+xlabel('x', 'fontsize',20); % x轴注解 
+ylabel('y', 'fontsize',20); % y轴注解
+xlim([0,6]);ylim([0,8]); %设置x，y轴的显示范围
+title('图4-3-2-3 两等倾线相交有1个正平衡点', 'fontsize',14,'FONTWeight','bold');
+text(2.2,-0.3, 'P', 'fontsize',16,'FONTWeight','bold');
+text(3.1,2,'M', 'fontsize',16,'FONTWeight','bold');
+text(2.8,3,'F2', 'fontsize',16,'FONTWeight','bold');
+text(4.2,2.8,'I', 'fontsize',16,'FONTWeight','bold');
+text(1.5,6.2,'II','fontsize',16,'FONTWeight','bold');
+text(1,2.5,'III','fontsize',16,'FONTWeight','bold');
+text(2.4,1.9,'IV','fontsize',16,'FONTWeight','bold')
+text(0.3,5.5, '等倾线1：x=3-0.5|y-2|', 'fontsize',12,'FONTWeight','bold'); %作文本标记
+text(2.4,5.1, '等倾线2：y=6x-12', 'fontsize',12,'FONTWeight','bold');
+
+附录C：程序3 [17]
+function f=xiangjiao3 ()
+a=2;b=0.5;c=10;d=4;e=1;f=1;y0=2;%参数赋初值
+[x,y]=ode45('hanshu',[0 1000],[2 1]',[],a,b,c,d,e,f,y0);%初值（2.5,0.01）情况下得xy的值
+plot(y(:,1),y(:,2), 'k')
+[x,y]=ode45('hanshu',[0 1000],[3 2]',[],a,b,c,d,e,f,y0);%同上，下同
+hold on
+plot(y(:,1),y(:,2), 'k')
+[x,y]=ode45('hanshu',[0 1000],[4 3]',[],a,b,c,d,e,f,y0);
+hold on
+plot(y(:,1),y(:,2), 'k')
+[x,y]=ode45('hanshu',[0 1000],[5 4]',[],a,b,c,d,e,f,y0);
+hold on
+plot(y(:,1),y(:,2), 'k')
+[x,y]=ode45('hanshu',[0 1000],[6 5]',[],a,b,c,d,e,f,y0);
+hold on
+plot(y(:,1),y(:,2), 'k')
+[x,y]=ode45('hanshu',[0 1000],[7 6]',[],a,b,c,d,e,f,y0);
+hold on
+plot(y(:,1),y(:,2), 'k')
+[x,y]=ode45('hanshu',[0 1000],[8 7]',[],a,b,c,d,e,f,y0);
+hold on
+plot(y(:,1),y(:,2), 'k')
+[x,y]=ode45('hanshu',[0 1000],[9 8]',[],a,b,c,d,e,f,y0);
+hold on
+plot(y(:,1),y(:,2), 'k')
+[x,y]=ode45('hanshu',[0 1000],[10 9]',[],a,b,c,d,e,f,y0);
+hold on
+plot(y(:,1),y(:,2), 'k')
+[x,y]=ode45('hanshu',[0 1000],[11 10]',[],a,b,c,d,e,f,y0);
+hold on
+plot(y(:,1),y(:,2), 'k')
+[x,y]=ode45('hanshu',[0 1000],[2.8 0.2]',[],a,b,c,d,e,f,y0);
+hold on
+plot(y(:,1),y(:,2), 'k')
+[x,y]=ode45('hanshu',[0 1000],[4 0.6]',[],a,b,c,d,e,f,y0);
+hold on
+plot(y(:,1),y(:,2), 'k')
+z=1:0.1:5;%抛物线和直线
+w=4*z-10;
+q=0:0.1:9;
+p=3-0.5*abs(q-2);
+hold on
+plot(z,w,'b','LineWidth',2);
+hold on
+plot(p,q,'b','LineWidth',2)
+xlabel('x', 'fontsize',20); % x轴注解 
+ylabel('y', 'fontsize',20); % y轴注解
+xlim([1.5,3.5]);ylim([0,5]); %设置x，y轴的显示范围
+title('图4-3-3-2 两等倾线相交有1个正平衡点M时的轨线的运动方向', 'fontsize',14,'FONTWeight','bold');
+text(2.1,-0.2, 'P', 'fontsize',16,'FONTWeight','bold');
+text(3.1,2,'M', 'fontsize',16,'FONTWeight','bold');
+text(3.2,1.1,'I', 'fontsize',16,'FONTWeight','bold');
+text(3,4,'II','fontsize',16,'FONTWeight','bold');
+text(2,2,'III','fontsize',16,'FONTWeight','bold');
+text(2.25,0.3,'IV','fontsize',16,'FONTWeight','bold')
+text(1.8,4, '等倾线1：x=3-0.5|y-2|', 'fontsize',12,'FONTWeight','bold'); %作文本标记
+text(2.8,3.3, '等倾线2：y=4x-10', 'fontsize',12,'FONTWeight','bold')
+
